@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Form and Structured Content</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+    }
+    header, nav, main, footer {
+      padding: 1rem;
+      margin: auto;
+      max-width: 900px;
+    }
+    header {
+      background-color: #4a90e2;
+      color: #fff;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table th, table td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    table th {
+      background-color: #f0f0f0;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+    }
+    legend {
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+    }
+    input, select, textarea, button {
+      margin-top: 0.25rem;
+      padding: 0.4rem;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #357ab8;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to Our Showcase Page</h1>
+  <p>Demonstrating Lists, Tables, Media, and a Complete HTML5 Form</p>
+</header>
+
+<main>
+
+  <!-- Section with Lists -->
+  <section>
+    <h2>Our Services</h2>
+    <p>We provide the following:</p>
+    <ul>
+      <li>Web Design</li>
+      <li>Content Development</li>
+      <li>SEO Optimization</li>
+    </ul>
+    <p>Steps to get started:</p>
+    <ol>
+      <li>Contact us with your requirements.</li>
+      <li>Receive a custom proposal.</li>
+      <li>Start your project confidently.</li>
+    </ol>
+  </section>
+
+  <!-- Section with Table -->
+  <section>
+    <h2>Price List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Delivery Time</th>
+          <th>Price (USD)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basic Web Design</td>
+          <td>7 days</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <td>Advanced Web Design</td>
+          <td>14 days</td>
+          <td>$1200</td>
+        </tr>
+        <tr>
+          <td>SEO Package</td>
+          <td>30 days</td>
+          <td>$800</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Section with Media -->
+  <section>
+    <h2>Our Work in Action</h2>
+    <p>Here is a sample image and a short video showing our projects:</p>
+    <img src="https://via.placeholder.com/800x400" alt="Sample project image">
+    <video controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <!-- Complete HTML5 Form -->
+  <section>
+    <h2>Contact & Registration Form</h2>
+    <form action="#" method="post" autocomplete="on">
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required minlength="3">
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" placeholder="e.g. +1234567890" required pattern="^\+?\d{10,15}$">
+      </fieldset>
+
+      <fieldset>
+        <legend>Account Details</legend>
+        <label for="username">Username *</label>
+        <input type="text" id="username" name="username" required minlength="4" maxlength="20" autocomplete="username">
+
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" required minlength="6" autocomplete="new-password">
+
+        <label for="confirm-password">Confirm Password *</label>
+        <input type="password" id="confirm-password" name="confirm-password" required minlength="6" autocomplete="new-password">
+
+        <label for="role">Role *</label>
+        <select id="role" name="role" required>
+          <option value="">--Please choose--</option>
+          <option value="client">Client</option>
+          <option value="developer">Developer</option>
+          <option value="partner">Partner</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="website">Website (optional)</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+
+        <label for="about">Tell us about your project *</label>
+        <textarea id="about" name="about" rows="5" placeholder="Describe your project here..." required></textarea>
+
+        <label>
+          <input type="checkbox" name="newsletter" value="yes"> Subscribe to our newsletter
+        </label>
+
+        <label>
+          <input type="radio" name="contact-method" value="email" required> Contact by Email
+        </label>
+        <label>
+          <input type="radio" name="contact-method" value="phone" required> Contact by Phone
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Review</legend>
+        <label for="readonly-info">Referral Code</label>
+        <input type="text" id="readonly-info" name="referral" value="WELCOME2025" readonly>
+      </fieldset>
+
+      <button type="submit">Submit Form</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Web Solutions Inc. All rights reserved.
+</footer>
+
+</body>
+</html>
